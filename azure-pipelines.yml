@@ -1,0 +1,18 @@
+# HTML
+# Archive your static HTML project and save it with the build record.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+ name : saran
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    repository: 'sara111/Docker-img'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
