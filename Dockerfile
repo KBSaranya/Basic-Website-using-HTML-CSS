@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-		MAINTAINER "info@gamutgurus.com"
+		MAINTAINER "saranya.balaraman@aspiresys.com"
 		RUN apt-get update
 		RUN apt-get install -y nginx
 		COPY index.html /var/www/html
