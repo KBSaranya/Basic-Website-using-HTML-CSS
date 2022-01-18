@@ -10,6 +10,11 @@ pool:
  name : saran
 
 steps:
+- task: ManualIntervention@8
+  timeoutInMinutes: 1440
+  inputs:
+    instructions: 'Please approve my deployment'
+    emailRecipients: 'saranya.balaaman@aspiresys.com'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
